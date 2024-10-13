@@ -206,6 +206,8 @@ struct RegressionModel {
 	std::vector<Layer> layer;
 };
 
+
+// compute class label from raw prediction
 FloatType classify(FloatType prediction) {
 	return prediction > 0.5 ? 1 : 0;
 }
