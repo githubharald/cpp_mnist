@@ -35,15 +35,15 @@ Dataset load_dataset(const std::string& filepath) {
 	while (file.get(c)) {
 		tmp += c;
 		if (c == ',' || c == ';') {
-			float val = std::stof(tmp);
+			int val = std::stoi(tmp);
 			tmp.clear();
 			if (is_label) {
 				dataset.push_back(Sample());
-				dataset.back().target = val;
+				dataset.back().target = static_cast<FloatType>(val);
 				is_label = false;
 			}
 			else {
-				dataset.back().image.push_back(val / 255);
+				dataset.back().image.push_back(val / 255.0f);
 			}
 			if (c == ';') {
 				is_label = true;
@@ -209,7 +209,7 @@ struct RegressionModel {
 
 // compute class label from raw prediction
 FloatType classify(FloatType prediction) {
-	return prediction > 0.5 ? 1 : 0;
+	return prediction > 0.5 ? 1.0f : 0.0f;
 }
 
 
