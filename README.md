@@ -1,5 +1,5 @@
 # Simple MNIST classifier in plain C++
-A neural network built in ~260 lines of plain C++ code without any dependencies.
+A neural network written in ~260 lines of plain C++ code without any dependencies.
 The model is trained to distinguish the handwritten digits "0" and "1" from the MNIST dataset.
 
 

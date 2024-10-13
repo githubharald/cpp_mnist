@@ -72,7 +72,7 @@ FloatArray random_weight(size_t num_elements) {
 	FloatArray weight;
 	weight.reserve(num_elements);
 	for (size_t i = 0; i < num_elements; ++i) {
-		weight.push_back(static_cast<FloatType>((0.1 * std::rand()) / RAND_MAX));
+		weight.push_back(static_cast<FloatType>((0.01 * std::rand()) / RAND_MAX));
 	}
 	return weight;
 }
