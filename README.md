@@ -78,10 +78,10 @@ Press ENTER to see next sample...
 ````
 
 # How to run it
-* Unzip the file mnist_data.zip, make sure the files are in the same folder as the cpp file
-* Compile the C++ code, e.g. with `g++ cpp_mnist.cpp` on Linux, or by using Visual Studio on Windows
+* Unzip data.zip and make sure the unzipped files are in the same folder as the cpp file
+* Compile the C++ code, e.g. with `g++ mnist.cpp` on Linux, or by using Visual Studio on Windows
 * Run the program, e.g. by executing `./a.out` on Linux
-* The model takes ~10s to train, then evaluates on the testset (should get ~99% accuracy), and then shows samples and their predictions
+* The model takes ~10s to train, then it gets evaluated on the testset (should get ~99% accuracy), and finally samples and their predictions are shown
 
 
 # Notes
